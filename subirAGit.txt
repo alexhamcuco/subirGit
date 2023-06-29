@@ -1,0 +1,37 @@
+para crear un repositorio desde la terminar, 
+
+git init //inicializar, definir la tarjeta raiz
+
+git add . //añadiños los archivos nuevos creados a una lista
+
+git commit -m "nombre del commit" //poner nombre a los cambios hechos
+
+git push //subimos los datos a git
+
+me da error...¿por qué, hay que hacer el repositorio manualmente y darle la url
+
+…or create a new repository on the command line
+echo "# subirGit" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/alexhamcuco/subirGit.git
+git push -u origin main
+
+
+Explicacion de cada linea
+
+echo "# subirGit" >> README.md: Este comando agrega el texto "# subirGit" al archivo README.md. El operador ">>" se utiliza para redirigir la salida y agregar el contenido al final del archivo.
+
+git init: Este comando inicializa un nuevo repositorio de Git en el directorio actual. Crea una estructura de control de versiones de Git en la carpeta y prepara el repositorio para el seguimiento de los cambios en los archivos.
+
+git add README.md: Con este comando, se agrega el archivo README.md al área de preparación de Git. Esto indica a Git que debe incluir los cambios realizados en el archivo en el próximo commit.
+
+git commit -m "first commit": Este comando crea un nuevo commit en el repositorio de Git. Un commit es una instantánea de los cambios realizados en los archivos que están en el área de preparación. El mensaje "first commit" se utiliza para describir brevemente los cambios realizados en este commit en particular.
+
+git branch -M main: Este comando renombra la rama predeterminada de Git a "main". Anteriormente, la rama se llamaba "master". Esta es una práctica común para evitar términos con connotaciones históricas relacionadas con la esclavitud.
+
+git remote add origin https://github.com/alexhamcuco/subirGit.git: Con este comando, se establece un enlace entre el repositorio local y un repositorio remoto en GitHub. "origin" es el nombre dado al repositorio remoto, y la URL especificada es la ubicación del repositorio en GitHub.
+
+git push -u origin main: Este comando envía los commits locales al repositorio remoto en GitHub. Los cambios realizados en la rama "main" se sincronizan con el repositorio remoto. El argumento "-u" establece "origin/main" como rama de seguimiento predeterminada, lo que permite que en futuros push se realicen simplemente con "git push".
